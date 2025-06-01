@@ -1,22 +1,24 @@
-import { currentProjects, webProjects, softwareProjects, gameProjects } from "./data/projects"
-import ExperienceSection from "./sections/ExperienceSection/ExperienceSection"
-import Hero from "./components/Hero/Hero"
-import ProjectSection from "./sections/ProjectSection/ProjectSection"
-import SkillsSection from "./sections/SkillsSection/SkillsSection"
+import Navbar from "./components/Navbar/Navbar"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Home from "./pages/Home/Home"
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy"
 
 function App() {
 
   return (
-    <main className="bg-light min-vh-100">
-      <Hero />
-      <SkillsSection />
-      <ExperienceSection />
+    <Router>
+      <Navbar />
 
-      <ProjectSection title='Current Projects' projects={currentProjects} />
-      <ProjectSection title='Web Projects' projects={webProjects} />
-      <ProjectSection title='Backend Projects' projects={softwareProjects} />
-      <ProjectSection title='Games' projects={gameProjects} />
-    </main>
+      <main className="bg-light min-vh-100">
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        </Routes>
+
+      </main>
+
+    </Router>
   )
 }
 
