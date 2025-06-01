@@ -1,3 +1,6 @@
+# Deployment Script
+rollout.sh
+
 # Logs
 logs
 *.log
