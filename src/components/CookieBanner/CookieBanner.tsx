@@ -11,8 +11,7 @@ interface ConsentData {
     timestamp: number;
 }
 
-// const SIX_MONTHS_MS = 1000 * 60 * 60 * 24 * 30 * 6;
-const SIX_MONTHS_MS = 5000;
+const SIX_MONTHS_MS = 1000 * 60 * 60 * 24 * 30 * 6;
 
 const consentExpired = (timestamp: number) => Date.now() - timestamp > SIX_MONTHS_MS;
 
