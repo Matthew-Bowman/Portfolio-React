@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { ROUTES } from '../../data/routes';
 
 interface CookieBannerProps {
     onAccept: () => void;
@@ -74,7 +75,7 @@ export const CookieBanner: React.FC<CookieBannerProps> = ({ onAccept, onReject }
                     <div className="mb-3 mb-md-0">
                         <strong>We use cookies</strong> to improve your experience on this site. By accepting, you agree to our use of cookies.
                         {' '}
-                        <Link to="/privacy-policy" >Learn more</Link>
+                        <Link to={ROUTES.Privacy.path} >Learn more</Link>
                     </div>
                     <div className="ps-3 d-flex justify-content-end gap-3">
                         <button

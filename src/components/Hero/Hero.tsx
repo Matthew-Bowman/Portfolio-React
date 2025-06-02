@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
+import { EXTERNAL_LINKS, ROUTES } from '../../data/routes';
 
 const Hero: React.FC = () => {
     return (
@@ -11,7 +12,7 @@ const Hero: React.FC = () => {
                     <Button
                         variant="outline-primary"
                         size="lg"
-                        href="https://github.com/Matthew-Bowman"
+                        href={EXTERNAL_LINKS.GitHub.path}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
