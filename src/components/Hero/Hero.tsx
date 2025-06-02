@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
-import { EXTERNAL_LINKS, ROUTES } from '../../data/routes';
+import { EXTERNAL_LINKS } from '../../data/routes';
 
 const Hero: React.FC = () => {
     return (
