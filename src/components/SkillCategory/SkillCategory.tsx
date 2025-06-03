@@ -1,11 +1,11 @@
 import React from 'react';
 import SkillIcon from '../SkillIcon/SkillIcon';
+import type { ImageAsset } from '../../data/images';
 
 type SkillCategoryProps = {
   title: string;
   skills: {
-    src: string;
-    alt: string;
+    thumbnail: ImageAsset,
     label: string;
   }[];
 };

@@ -8,14 +8,13 @@ const ProjectCard: React.FC<ProjectType> = ({
   description,
   icons,
   thumbnail,
-  thumbnailAlt,
   showLink,
   repoLink,
 }) => {
   return (
     <div className="card h-100 shadow">
       {/* Conditionally render image if provided */}
-      {thumbnail && <img src={thumbnail} alt={thumbnailAlt || title} className="card-img-top img-fluid border-bottom" />}
+      {thumbnail && <img src={thumbnail.src} alt={thumbnail.alt || title} width={thumbnail.width} height={thumbnail.height} className="card-img-top img-fluid border-bottom" />}
       
       <div className="card-body d-flex flex-column h-100">
         <div className="mb-2 d-flex gap-2 justify-content-center flex-wrap">
