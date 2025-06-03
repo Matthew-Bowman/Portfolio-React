@@ -44,49 +44,49 @@ export const rawImages = {
     /*--------*/
 
     SaaS_Landing_Page: {
-        src: "/Images/Thumbnails/SaaS Landing Page.png",
+        src: "/Images/Thumbnails/SaaS Landing Page.webp",
         alt: "Image of a SaaS Landing Page",
         width: 1879,
         height: 1034,
     },
 
     Weather_Application: {
-        src: "/Images/Thumbnails/Weather Application.png",
+        src: "/Images/Thumbnails/Weather Application.webp",
         alt: "Image of a Weather Application",
         width: 1920,
         height: 973,
     },
 
     Discord_Interface: {
-        src: "/Images/Thumbnails/Discord Design.png",
+        src: "/Images/Thumbnails/Discord Design.webp",
         alt: "Image of a custom Discord Interface",
         width: 1920,
         height: 973,
     },
 
     Portfolio: {
-        src: "/Images/Thumbnails/Aidan Portfolio.png",
+        src: "/Images/Thumbnails/Aidan Portfolio.webp",
         alt: "Image of the Portfolio website",
         width: 1920,
         height: 973,
     },
 
     Sketch_It: {
-        src: "/Images/Thumbnails/Sketch-It.png",
+        src: "/Images/Thumbnails/Sketch-It.webp",
         alt: "Image of the Sketch-It website",
         width: 1600,
         height: 900,
     },
 
     Social_Media_App: {
-        src: "/Images/Thumbnails/Social Media App.png",
+        src: "/Images/Thumbnails/Social Media App.webp",
         alt: "Image of the Social Media App",
         width: 1920,
         height: 973,
     },
 
     The_New_Infirmary: {
-        src: "/Images/Thumbnails/Level One.png",
+        src: "/Images/Thumbnails/Level One.webp",
         alt: "Image of the game Level One",
         width: 602,
         height: 236,
