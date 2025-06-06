@@ -1,11 +1,13 @@
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import { CookieHandler } from "./components/CookieHandler/CookieHandler";
 import Footer from "./components/Footer/Footer";
 import { ROUTES } from "./data/routes";
+import { lazy } from "react";
 
+// Lazy load the pages
+const Home = lazy(() => import("./pages/Home/Home"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy/PrivacyPolicy"));
 
 function App() {
   return (
