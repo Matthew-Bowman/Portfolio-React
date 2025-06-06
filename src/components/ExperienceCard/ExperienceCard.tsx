@@ -11,7 +11,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ title, period, descript
   <Card className="shadow mb-3">
     <Card.Header>
       <h3 className="fw-bold m-0">{title}</h3>
-      <h6 className="fw-bold m-0">{period}</h6>
+      <time className="fw-bold m-0">{period}</time>
     </Card.Header>
     <Card.Body>
       <p className="card-text">{description}</p>
