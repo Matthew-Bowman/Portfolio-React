@@ -34,3 +34,12 @@ jobs:
           source: "dist/**"
           target: "/var/www/matthewbowman.uk/public_live/"
           strip_components: 1
+
+      # Notify Discord on success
+      - name: Notify Discord
+        if: success()
+        run: |
+          curl -H "Content-Type: application/json" \
+            -X POST \
+            -d '{"content": "**Build succeeded!** 🎉\nRepository: '"${{ github.repository }}"'\nBranch: '"${{ github.ref_name }}"'\nRun: <'"${{ github.run_url }}"'>"}' \
+            ${{ secrets.DISCORD_WEBHOOK_URL }}
