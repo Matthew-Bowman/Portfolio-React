@@ -12,6 +12,9 @@ export const footerCategories: FooterCategory[] = [
   },
   {
     title: 'Social',
-    links: Object.values(EXTERNAL_LINKS),
+    links: [
+      EXTERNAL_LINKS.LinkedIn,
+      EXTERNAL_LINKS.GitHub,
+    ],
   },
 ];
