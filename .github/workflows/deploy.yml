@@ -26,11 +26,11 @@ jobs:
         run: npm run build
 
       - name: Deploy to server via SCP
-        if: github.event_name == 'workflow_dispatch' # Deploy only on manual trigger
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "dist/*"
+          source: "dist/**"
           target: "/var/www/matthewbowman.uk/public_live/"
+          strip_components: 1
