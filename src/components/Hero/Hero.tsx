@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
                     <h1 className="display-4 fw-bold">Matthew Bowman</h1>
                     <p className="fs-5">Structured Systems Analyst & Full Stack Developer</p>
                     <Button
-                        variant="outline-primary"
+                        variant="primary"
                         size="lg"
                         href={EXTERNAL_LINKS.GitHub.path}
                         target="_blank"
