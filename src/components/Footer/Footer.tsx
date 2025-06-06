@@ -9,13 +9,13 @@ const Footer: React.FC = () => {
             <Container>
                 <Row className="justify-content-between align-items-start">
                     <Col md="auto" className="mb-4 mb-md-0 text-center text-md-start">
-                        <h5 className="fw-bold">Matthew Bowman</h5>
+                        <h2 className="fw-bold">Matthew Bowman</h2>
                         <p className="mb-0">© {new Date().getFullYear()} Matthew Bowman. All rights reserved.</p>
                     </Col>
 
                     {footerCategories.map(({ title, links }) => (
                         <Col key={title} xs={6} md="auto" className="mb-4 mb-md-0">
-                            <h6 className="fw-semibold">{title}</h6>
+                            <h3 className="fw-semibold">{title}</h3>
                             <ul className="list-unstyled">
                                 {links.map(({ label, path, external }) => (
                                     <li key={path} className="mb-2">
