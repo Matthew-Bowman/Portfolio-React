@@ -1,4 +1,4 @@
-import React from 'react';
+import {type FC} from 'react'
 import SkillIcon from '../SkillIcon/SkillIcon';
 import type { ImageAsset } from '../../data/images';
 
@@ -10,7 +10,7 @@ type SkillCategoryProps = {
   }[];
 };
 
-const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
+const SkillCategory: FC<SkillCategoryProps> = ({ title, skills }) => {
   return (
     <>
       <h3 className="fw-bold m-0 col-12 text-start">{title}</h3>

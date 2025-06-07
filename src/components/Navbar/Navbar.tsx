@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { NAVBAR_LINKS } from "../../data/navbarLinks";
 import { ROUTES } from "../../data/routes";
 
-const Navbar: React.FC = () => {
+const Navbar: FC = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">

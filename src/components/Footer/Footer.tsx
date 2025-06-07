@@ -1,9 +1,9 @@
-import React from 'react';
+import { type FC } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { footerCategories } from '../../data/footerLinks';
 
-const Footer: React.FC = () => {
+const Footer: FC = () => {
     return (
         <footer className="py-5 mt-4 bg-dark text-light">
             <Container>

@@ -1,24 +1,26 @@
-import React, { useState } from 'react';
-import { CookieBanner } from '../CookieBanner/CookieBanner';
-import ReactGA from 'react-ga4';
+import { useState, type FC } from "react";
+import { CookieBanner } from "../CookieBanner/CookieBanner";
+import ReactGA from "react-ga4";
 
-export const CookieHandler: React.FC = () => {
-    const [consentGiven, setConsentGiven] = useState(false);
-    const measurementId = "G-5DP5061Q4P";
+export const CookieHandler: FC = () => {
+  const [consentGiven, setConsentGiven] = useState(false);
+  const measurementId = "G-5DP5061Q4P";
 
-    const handleAccept = () => {
-        setConsentGiven(true);
-        ReactGA.initialize(measurementId);
-        ReactGA.send("pageview");
-    }
+  const handleAccept = () => {
+    setConsentGiven(true);
+    ReactGA.initialize(measurementId);
+    ReactGA.send("pageview");
+  };
 
-    const handleReject = () => {
-        setConsentGiven(false);
-    }
+  const handleReject = () => {
+    setConsentGiven(false);
+  };
 
-    return (
-        <div>
-            {!consentGiven && <CookieBanner onAccept={handleAccept} onReject={() => handleReject} />}
-        </div>
-    );
+  return (
+    <div>
+      {!consentGiven && (
+        <CookieBanner onAccept={handleAccept} onReject={() => handleReject} />
+      )}
+    </div>
+  );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import {type FC} from 'react'
 
 import Section from '../../components/Section/Section';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
@@ -10,7 +10,7 @@ type ProjectSectionProps = {
     projects: ProjectType[];
 };
 
-const ProjectSection: React.FC<ProjectSectionProps> = ({
+const ProjectSection: FC<ProjectSectionProps> = ({
     title,
     projects
 }) => {

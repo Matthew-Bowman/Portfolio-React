@@ -1,9 +1,9 @@
-import React from 'react';
+import {type FC} from 'react'
 import SkillIcon from '../SkillIcon/SkillIcon';
 import type { ProjectType } from '../../data/projects';
 
 
-const ProjectCard: React.FC<ProjectType> = ({
+const ProjectCard: FC<ProjectType> = ({
   title,
   description,
   icons,

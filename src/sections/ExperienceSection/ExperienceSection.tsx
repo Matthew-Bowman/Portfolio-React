@@ -1,4 +1,4 @@
-import React from 'react';
+import {type FC, Fragment} from 'react'
 import ExperienceCard from '../../components/ExperienceCard/ExperienceCard';
 import { Container, Row, Col } from 'react-bootstrap';
 import Section from '../../components/Section/Section';
@@ -18,19 +18,19 @@ const experiences = [
     },
 ];
 
-const ExperienceSection: React.FC = () => {
+const ExperienceSection: FC = () => {
     return (
         <Section title="Professional Experience">
             <Container className="mt-3">
                 <Row className="gy-4 justify-content-center">
                     <Col xs={12} md={6} xl={4}>
                         {experiences.map((exp, index) => (
-                            <React.Fragment key={exp.title}>
+                            <Fragment key={exp.title}>
                                 <ExperienceCard {...exp} />
                                 {index < experiences.length - 1 && (
                                     <div className="my-2 mx-auto bg-primary rounded" style={{ height: '64px', width: '3px' }} />
                                 )}
-                            </React.Fragment>
+                            </Fragment>
                         ))}
                     </Col>
                 </Row>

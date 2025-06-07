@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
+import { type FC } from "react";
+import { Card } from "react-bootstrap";
 
 type ExperienceCardProps = {
   title: string;
@@ -7,7 +7,11 @@ type ExperienceCardProps = {
   description: string;
 };
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({ title, period, description }) => (
+const ExperienceCard: FC<ExperienceCardProps> = ({
+  title,
+  period,
+  description,
+}) => (
   <Card className="shadow mb-3">
     <Card.Header>
       <h3 className="fw-bold m-0">{title}</h3>

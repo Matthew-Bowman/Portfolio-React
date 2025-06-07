@@ -1,4 +1,4 @@
-import React from 'react';
+import {type FC} from 'react'
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import type { ImageAsset } from '../../data/images';
 
@@ -16,7 +16,7 @@ const sizeMap: Record<Size, number> = {
     large: 96,
 };
 
-const SkillIcon: React.FC<SkillIconProps> = ({ label, thumbnail, size = 'medium' }) => {
+const SkillIcon: FC<SkillIconProps> = ({ label, thumbnail, size = 'medium' }) => {
     const dimension = sizeMap[size];
 
     return (
