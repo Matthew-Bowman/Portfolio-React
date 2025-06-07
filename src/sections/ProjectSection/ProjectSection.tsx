@@ -1,32 +1,28 @@
-import {type FC} from 'react'
+import { type FC } from "react";
 
-import Section from '../../components/Section/Section';
-import ProjectCard from '../../components/ProjectCard/ProjectCard';
-import { Container, Row, Col } from 'react-bootstrap';
-import type { ProjectType } from '../../data/projects';
+import Section from "../../components/Section/Section";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import type { ProjectType } from "../../data/projects";
 
 type ProjectSectionProps = {
-    title: string;
-    projects: ProjectType[];
+  title: string;
+  projects: ProjectType[];
 };
 
-const ProjectSection: FC<ProjectSectionProps> = ({
-    title,
-    projects
-}) => {
-    return (
-        <Section title={title}>
-            <Container className="mt-3 text-center">
-                <Row className="gy-4 justify-content-center">
-                    {projects.map((project) => (
-                        <Col key={project.title} xs={12} md={6} xl={4}>
-                            <ProjectCard {...project} />
-                        </Col>
-                    ))}
-                </Row>
-            </Container>
-        </Section>
-    );
+const ProjectSection: FC<ProjectSectionProps> = ({ title, projects }) => {
+  return (
+    <Section title={title}>
+      <div className="container mx-auto mt-12 text-center">
+        <div className="flex flex-wrap justify-center gap-y-8 gap-x-6">
+          {projects.map((project) => (
+            <div key={project.title} className="w-full md:w-1/2 xl:w-1/3 px-4">
+              <ProjectCard {...project} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
 };
 
 export default ProjectSection;
