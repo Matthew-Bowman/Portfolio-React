@@ -1,22 +1,30 @@
+import { lazy, Suspense } from "react";
 import Hero from "../../components/Hero/Hero";
-import { currentProjects, gameProjects, softwareProjects, webProjects } from "../../data/projects";
-import ExperienceSection from "../../sections/ExperienceSection/ExperienceSection";
-import ProjectSection from "../../sections/ProjectSection/ProjectSection";
+
+const ProjectSection = lazy(
+  () => import("../../sections/ProjectSection/ProjectSection")
+);
+
 import SkillsSection from "../../sections/SkillsSection/SkillsSection";
+import ExperienceSection from "../../sections/ExperienceSection/ExperienceSection";
+import { projectList } from "../../data/projectList";
 
 function Home() {
-    return (
-        <>
-            <Hero />
-            <SkillsSection />
-            <ExperienceSection />
+  return (
+    <>
+      {/* Above the fold */}
+      <Hero />
+      <SkillsSection />
+      <ExperienceSection />
 
-            <ProjectSection title='Current Projects' projects={currentProjects} />
-            <ProjectSection title='Web Projects' projects={webProjects} />
-            <ProjectSection title='Backend Projects' projects={softwareProjects} />
-            <ProjectSection title='Games' projects={gameProjects} />
-        </>
-    )
-};
+      {/* Below the fold */}
+      {projectList.map(({ title, projects, loadingLabel }) => (
+        <Suspense key={title} fallback={<div>{loadingLabel}</div>}>
+          <ProjectSection title={title} projects={projects} />
+        </Suspense>
+      ))}
+    </>
+  );
+}
 
 export default Home;
