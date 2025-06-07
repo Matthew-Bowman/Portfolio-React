@@ -25,6 +25,17 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Clean server directory before deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            if [ -d /var/www/matthewbowman.uk/public_live ]; then
+              rm -rf /var/www/matthewbowman.uk/public_live/*
+            fi
+
       - name: Deploy to server via SCP
         uses: appleboy/scp-action@master
         with:
