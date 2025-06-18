@@ -1,0 +1,27 @@
+/*--------------------------*/
+/*          Button          */
+/*--------------------------*/
+
+.button {
+  outline: none;
+  border: none;
+  border-radius: var(--br-sm);
+
+  padding: var(--spacing-md) var(--spacing-lg);
+
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+
+  background-color: var(--color-brand);
+  color: var(--color-secondary);
+
+  transition: 0.2s;
+
+  &:hover {
+    background-color: var(--color-brandAlt);
+  }
+
+  @media only screen and (max-width: 1024px) {
+    font-size: var(--fs-subheading);
+  }
+}

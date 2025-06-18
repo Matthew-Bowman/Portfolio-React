@@ -1,40 +1,38 @@
 import { type FC } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { NAVBAR_LINKS } from "../../data/navbarLinks";
 import { ROUTES } from "../../data/routes";
+import styles from './Navbar.module.css';
+
 
 const Navbar: FC = () => {
+
+
+  const location = useLocation();
+  const currentPath = location.pathname;
+  console.log(currentPath);
+
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
-        <Link to={ROUTES.Home.path} className="navbar-brand fw-bold">
-          Matthew Bowman
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded={false}
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            {NAVBAR_LINKS.map(({ label, path }) =>
-              path ? (
-                <li key={path} className="nav-item">
-                  <Link to={path} className="nav-link">
-                    {label}
-                  </Link>
-                </li>
-              ) : null
-            )}
-          </ul>
-        </div>
-      </div>
+    <nav className={styles.navbar}>
+
+      {/* Branding */}
+      <Link to={ROUTES.Home.path} className={styles.navbar_brand}>
+        MATTHEW BOWMAN
+      </Link>
+
+      {/* Links */}
+      <ul className={styles.navbar_links}>
+        {NAVBAR_LINKS.map(({ label, path }) =>
+          path ? (
+            <li key={path} className={styles.navbar_linkWrapper}>
+              <Link to={path} className={`${styles.navbar_linkItem} ${currentPath === path ? styles.navbar_linkItemSelected : ''}`}>
+                {label}
+              </Link>
+            </li>
+          ) : null
+        )}
+      </ul>
     </nav>
   );
 };
