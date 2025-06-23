@@ -7,7 +7,7 @@ function PrivacyPolicy() {
             <Helmet>
                 <link
                     rel="canonical"
-                    href={`https://matthewbowman.uk/${ROUTES.Privacy.path}`}
+                    href={`https://matthewbowman.uk${ROUTES.Privacy.path}`}
                 />
                 <title>Privacy Policy | Matthew Bowman</title>
             </Helmet>

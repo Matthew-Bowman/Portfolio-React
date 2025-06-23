@@ -41,7 +41,7 @@ function ContactPage() {
       <Helmet>
         <link
           rel="canonical"
-          href={`https://matthewbowman.uk/${ROUTES.ContactUs.path}`}
+          href={`https://matthewbowman.uk${ROUTES.ContactUs.path}`}
         />
         <title>Contact Us | Matthew Bowman</title>
       </Helmet>

@@ -18,7 +18,7 @@ function LandingPage() {
       <Helmet>
         <link
           rel="canonical"
-          href={`https://matthewbowman.uk/${ROUTES.Home.path}`}
+          href={`https://matthewbowman.uk${ROUTES.Home.path}`}
         />
         <title>Home | Matthew Bowman</title>
       </Helmet>
