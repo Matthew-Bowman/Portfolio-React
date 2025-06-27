@@ -23,12 +23,28 @@ const Navbar: FC = () => {
 
       {/* Links */}
       <ul className={styles.navbar_links}>
-        {NAVBAR_LINKS.map(({ label, path }) =>
+        {NAVBAR_LINKS.map(({ label, path, external }) =>
           path ? (
             <li key={path} className={styles.navbar_linkWrapper}>
-              <Link to={path} className={`${styles.navbar_linkItem} ${currentPath === path ? styles.navbar_linkItemSelected : ''}`}>
-                {label}
-              </Link>
+
+              {external ? (
+                <a
+                  href={path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${styles.navbar_linkItem} ${currentPath === path ? styles.navbar_linkItemSelected : ''}`}
+                >
+                  {label}
+                </a>
+              ) : (
+                <Link
+                  to={path}
+                  className={`${styles.navbar_linkItem} ${currentPath === path ? styles.navbar_linkItemSelected : ''}`}
+                >
+                  {label}
+                </Link>
+              )}
+
             </li>
           ) : null
         )}

@@ -1,4 +1,9 @@
-import { ROUTES, EXTERNAL_LINKS, type RouteItem } from './routes';
+import {
+  ROUTES,
+  EXTERNAL_LINKS,
+  type RouteItem,
+  PROJECT_LINKS,
+} from "./routes";
 
 export interface FooterCategory {
   title: string;
@@ -7,14 +12,15 @@ export interface FooterCategory {
 
 export const footerCategories: FooterCategory[] = [
   {
-    title: 'Site',
+    title: "Site",
     links: Object.values(ROUTES),
   },
   {
-    title: 'Social',
-    links: [
-      EXTERNAL_LINKS.LinkedIn,
-      EXTERNAL_LINKS.GitHub,
-    ],
+    title: "Social",
+    links: [EXTERNAL_LINKS.LinkedIn, EXTERNAL_LINKS.GitHub],
+  },
+  {
+    title: "External",
+    links: [PROJECT_LINKS.MASTER_PROJECTS_PAGE],
   },
 ];

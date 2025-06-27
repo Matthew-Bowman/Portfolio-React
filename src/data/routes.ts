@@ -34,6 +34,8 @@ export const EXTERNAL_LINKS: { [K in ExternalLinksKey]: RouteItem } = rawExterna
 /* External Link Mapping */
 /*-----------------------*/
 const rawProjectLinks = {
+    MASTER_PROJECTS_PAGE: { label: 'Projects', path: `${EXTERNAL_LINKS.GitHub_Pages.path}Portfolio/`, external: true },
+
     Repo_ESP32_WifiManager: { label: 'ESP32 WifiManager', path: `${EXTERNAL_LINKS.GitHub.path}ESP32-WifiManager/`, external: true },
     Repo_SmartDeviceHub: { label: 'Smart Device Hub', path: `${EXTERNAL_LINKS.GitHub.path}SmartDeviceHub/`, external: true },
     Repo_SaaS_Landing_Page: { label: 'SaaS Landing Page', path: `${EXTERNAL_LINKS.GitHub.path}SaaS-Landing-Page/`, external: true },
