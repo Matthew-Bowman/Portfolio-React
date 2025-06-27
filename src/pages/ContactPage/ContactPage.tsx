@@ -2,6 +2,9 @@ import { useState, type FormEvent } from 'react';
 import styles from './ContactPage.module.css'
 import { Helmet } from 'react-helmet';
 import { ROUTES } from '../../data/routes';
+import Input from '../../components/Input/Input';
+import TextArea from '../../components/TextArea/TextArea';
+import Button from '../../components/Button/Button';
 
 function ContactPage() {
 
@@ -52,25 +55,19 @@ function ContactPage() {
           <p className={styles.subtitle}>Have a project in mind? Drop me a message!</p>
 
           <form className={styles.form} onSubmit={handleSubmit}>
-            <div className={styles.inputGroup}>
-              <label>Name</label>
-              <input name='name' type="text" placeholder="Your Name" onChange={handleChange} required />
-            </div>
 
-            <div className={styles.inputGroup}>
-              <label>Email</label>
-              <input name='email' type="email" placeholder="your@email.com" onChange={handleChange} required />
-            </div>
+            <Input label='Name' className={`${styles.fadeLeft}`} placeholder='Your Name' name='name' type='text' onChange={handleChange} required />
 
-            <div className={styles.inputGroup}>
-              <label>Message</label>
-              <textarea name='message' rows={5} placeholder="Tell me about your project..." onChange={handleChange} required />
-            </div>
+            <Input label='Email' className={`${styles.fadeLeft}`} placeholder='your@email.com' name='email' type='email' onChange={handleChange} required />
 
+            <TextArea label={'Message'} className={`${styles.fadeLeft}`} rows={5} placeholder={'Tell me about your project...'} name={'message'} onChange={handleChange} />
+
+            <Button className={`${styles.fadeLeft}`} text='Send Message' onClick={() => { }} />
+            
             {/* Honeypot Field to Prevent Abuse (Bots will fill this out automatically) */}
             <input name='honeypot' type="text" hidden />
 
-            <button type="submit" className={styles.submitButton}>Send Message</button>
+
           </form>
 
           {status && <p style={{ marginTop: '1rem', textAlign: 'center' }}>{status}</p>}
