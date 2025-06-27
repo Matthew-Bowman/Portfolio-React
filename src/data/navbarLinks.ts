@@ -1,4 +1,4 @@
-import { EXTERNAL_LINKS, PROJECT_LINKS, ROUTES } from './routes';
+import { PROJECT_LINKS, ROUTES } from './routes';
 
 export const NAVBAR_LINKS = [
     ROUTES.Home,
