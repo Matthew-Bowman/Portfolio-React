@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { CookieHandler } from "../components/CookieHandler/CookieHandler";
 import Footer from "../components/Footer/Footer";
 import { ROUTES } from "../data/routes";
 import { lazy } from "react";
@@ -27,7 +26,6 @@ function App() {
 
         <Footer />
 
-        <CookieHandler />
       </div>
     </Router>
   );
