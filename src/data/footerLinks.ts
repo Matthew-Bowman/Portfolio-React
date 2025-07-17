@@ -5,7 +5,7 @@ import {
   PROJECT_LINKS,
 } from "./routes";
 
-export interface FooterCategory {
+interface FooterCategory {
   title: string;
   links: RouteItem[];
 }
