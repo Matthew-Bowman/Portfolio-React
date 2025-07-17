@@ -2,13 +2,9 @@ import Navbar from "../components/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import { ROUTES } from "../data/routes";
-import { lazy } from "react";
 import LandingPage from "../pages/LandingPage/LandingPage";
 import styles from './App.module.css';
 import ContactPage from "../pages/ContactPage/ContactPage";
-
-// Lazy load the pages
-const PrivacyPolicy = lazy(() => import("../pages/PrivacyPolicy/PrivacyPolicy"));
 
 function App() {
   return (
@@ -20,7 +16,6 @@ function App() {
           <Routes>
             <Route path={ROUTES.Home.path} element={<LandingPage />} />
             <Route path={ROUTES.ContactUs.path} element={<ContactPage />} />
-            <Route path={ROUTES.Privacy.path} element={<PrivacyPolicy />} />
           </Routes>
         </main>
 

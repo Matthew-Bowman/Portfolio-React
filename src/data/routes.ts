@@ -10,7 +10,6 @@ export interface RouteItem {
 const rawRoutes = {
     Home: { label: 'Home', path: '/', external: false },
     ContactUs: { label: 'Contact', path: '/contact-us', external: false },
-    Privacy: { label: 'Privacy Policy', path: '/privacy-policy', external: false },
 } as const;
 
 type RouteKey = keyof typeof rawRoutes;
